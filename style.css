@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap')
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.site-header {
+    background-color: #ffeb3b; /* Amarelo pastel */
+    color: #333; /* Cor do texto no cabeçalho */
+    padding: 15px;
+    text-align: center;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.tab {
+    text-decoration: none;
+    color: #fae9e9;
+    padding: 10px 20px;
+    background-color: #555;
+    margin: 0 10px;
+    border-radius: 5px;
+}
+
+.image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}
+
+img {
+    width: 300px; /* Ajuste conforme necessário */
+    height: auto;
+    margin-right: 10px; /* Espaço entre as imagens, ajuste conforme necessário */
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    bottom: 0;
+    width: 100%;
+}
+
+.conteiner-li {
+    margin-left: 50px;
+}
+
+.pacifico-regular {
+    font-family: "Pacifico", cursive;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+.carousel-control-prev {
+    background-color: rgb(204, 204, 180);
+}
+
+.carousel-control-next {
+    background-color: rgb(204, 204, 180);
+}
+
+.borda-lateral {
+    border-left: 50px solid white; /* Cor e largura da borda esquerda */
+    border-right: 50px solid white; /* Cor e largura da borda direita */
+  }
+  
+
