@@ -1,181 +1,328 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Site de Voleibol</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
-<!-- Bootstrap CSS -->
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Voleibol | Guia moderno</title>
 
-<!-- Bootstrap JS e dependências Popper.js e jQuery -->
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
+  <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
-    <header class="site-header">
-        <h1 class="pacifico-regular">Voleibol</h1>
-        <nav>
-            <a href="#sobre" class="tab">Sobre</a>
-            <a href="#regras" class="tab">Regras</a>
-            <a href="#contato" class="tab">Contato</a>
-        </nav>
-    </header>
-    <div class="borda-lateral">
-<h2 class="pacifico-regular">Sobre</h2>
-<p>O voleibol é um esporte praticado entre duas equipes numa quadra retangular. Ela é dividida por uma rede colocada verticalmente sobre a linha central.</p>
-<p>O voleibol é jogado com uma bola e com as mãos. O objetivo principal é lançar a bola por cima da rede e fazê-la tocar no chão do adversário.</p>
+  <!-- Topbar -->
+  <header class="topbar" id="topo">
+    <div class="container topbar__inner">
+      <a class="brand" href="#topo" aria-label="Ir para o topo">
+        <span class="brand__dot" aria-hidden="true"></span>
+        <span class="brand__text">Voleibol</span>
+      </a>
 
-<center><div id="meuCarrossel" class="carousel slide" data-ride="carousel">
-    <div class="carousel-inner">
-      <div class="carousel-item active">
-        <img src="imagem 1.jpg" class="d-block w-50" alt="Imagem 1">
-      </div>
-      <div class="carousel-item">
-        <img src="imagem 2.jpg" class="d-block w-50" alt="Imagem 2">
-      </div>
-      <div class="carousel-item">
-        <img src="imagem 3.jpg" class="d-block w-50" alt="Imagem 3">
-      </div>
-      <!-- Adicione mais itens conforme necessário -->
+      <button class="navbtn" id="navbtn" aria-label="Abrir menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="nav" id="nav">
+        <a href="#sobre">Sobre</a>
+        <a href="#regras">Regras</a>
+        <a href="#posicoes">Posições</a>
+        <a href="#faltas">Faltas</a>
+        <a href="#fundamentos">Fundamentos</a>
+        <a href="#video">Vídeo</a>
+      </nav>
     </div>
-    <a class="carousel-control-prev" href="#meuCarrossel" role="button" data-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="sr-only">Anterior</span>
-    </a>
-    <a class="carousel-control-next" href="#meuCarrossel" role="button" data-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="sr-only">Próximo</span>
-    </a>
-  </div></center>
-  
-    <h2 class="pacifico-regular">Regras do voleibol</h2>
-    <p>As principais regras do vôlei são:</p>
+  </header>
 
-    <div class="conteiner-li">
-    <p>
-        <li>Cada equipe possui um técnico;</li>
-    </p>
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container hero__grid">
+      <div class="hero__content">
+        <div class="pill">Guia completo • Regras • Fundamentos • Quadra</div>
+        <h1>Voleibol, do básico ao essencial</h1>
+        <p class="lead">
+          Uma página moderna com explicações claras sobre o esporte: objetivo do jogo, regras principais,
+          posições, faltas e fundamentos — com imagens e vídeo.
+        </p>
 
-    <p>
-        <li>Uma partida é constituída de 3 a 5 sets;</li>
-    </p>
+        <div class="hero__actions">
+          <a class="btn primary" href="#sobre">Começar</a>
+          <a class="btn ghost" href="#regras">Ver regras</a>
+        </div>
 
-    <p>
-        <li>Não existe tempo pré-determinado para cada set;</li>
-    </p>
+        <div class="stats">
+          <div class="stat">
+            <div class="stat__num">6</div>
+            <div class="stat__label">jogadores em quadra</div>
+          </div>
+          <div class="stat">
+            <div class="stat__num">25</div>
+            <div class="stat__label">pontos por set</div>
+          </div>
+          <div class="stat">
+            <div class="stat__num">2</div>
+            <div class="stat__label">diferença mínima</div>
+          </div>
+        </div>
+      </div>
 
-    <p>
-        <li>Cada set tem um máximo de 25 pontos com uma diferença mínima de 2 pontos;</li>
-    </p>
+      <!-- Slider -->
+      <div class="hero__media">
+        <div class="slider" aria-label="Galeria de imagens do voleibol">
+          <div class="slider__viewport" id="sliderViewport">
+            <img src="imagem 1.jpg" alt="Imagem de voleibol 1" class="slider__img is-active">
+            <img src="imagem 2.jpg" alt="Imagem de voleibol 2" class="slider__img">
+            <img src="imagem 3.jpg" alt="Imagem de voleibol 3" class="slider__img">
+          </div>
 
-    <p>
-        <li>Em caso de empate no final do set (24 x 24), a partida continua até que a diferença de dois pontos seja atingida (26 x 24, 27 x 25, etc.);</li>
-    </p>
+          <div class="slider__controls">
+            <button class="iconbtn" id="prevBtn" aria-label="Imagem anterior">‹</button>
+            <div class="dots" id="dots" aria-label="Indicadores do carrossel"></div>
+            <button class="iconbtn" id="nextBtn" aria-label="Próxima imagem">›</button>
+          </div>
+        </div>
 
-    <p>
-        <li>Ganha a equipe que vencer três sets;</li>
-    </p>
+        <div class="note">
+          <span class="note__badge">Dica</span>
+          <span>Use este site como base para estudos e apresentações.</span>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <p>
-        <li>Se houver empate nos sets (2x2), o 5º set será decisivo. No entanto, este vai somente até 15 pontos e também precisa de uma diferença mínima de 2 pontos.</li>
-    </p>
+  <!-- Content -->
+  <main>
+    <section class="section" id="sobre">
+      <div class="container">
+        <div class="section__head">
+          <h2>Sobre</h2>
+          <p>O que é o voleibol e qual o objetivo do jogo.</p>
+        </div>
 
-</div>
-<h2 class="pacifico-regular">Quantos jogadores tem o voleibol?</h2>
-<p>No vôlei de quadra, cada equipe é composta por 12 jogadores. Deste, 6 jogadores são considerados titulares, enquanto os outros 6 são reservas.
+        <div class="grid two">
+          <article class="card">
+            <h3>O que é?</h3>
+            <p>
+              O voleibol é um esporte praticado entre duas equipes em uma quadra retangular, dividida por uma rede.
+              O jogo é disputado com uma bola e, em geral, com toques usando as mãos e braços.
+            </p>
+          </article>
 
-    Além do vôlei de quadra, há também o vôlei de praia. Diferente da quadra, o de praia é jogado na areia e contém somente 4 jogadores, sendo 2 de cada equipe.</p>
-<h2 class="pacifico-regular">Posições do voleibol</h2>
-<p>Cada jogador tem uma posição dentro da quadra, apresentando a seguinte ordem de rotação:</p>
-<div class="conteiner-li">
-    <p>
-        <li>3 jogadores posicionam-se perto da rede;</li>
-    </p>
+          <article class="card">
+            <h3>Objetivo</h3>
+            <p>
+              O objetivo é enviar a bola por cima da rede e fazê-la tocar no chão da quadra adversária,
+              ao mesmo tempo em que se impede que isso aconteça na própria quadra.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
 
-    <p>
-        <li>3 jogadores posicionam-se na linha de trás.</li>
-    </p>
-</div>
-<img src="quadra.png">
-<h2 class="pacifico-regular">Quando se comete falta no voleibol?</h2>
-<p>As regras do voleibol incluem diversas faltas no saque, ataque, passe de bola, toques, posição, rotação de jogadores, dentre outros. Alguns exemplos de falta são:</p>
+    <section class="section alt" id="regras">
+      <div class="container">
+        <div class="section__head">
+          <h2>Regras principais</h2>
+          <p>O essencial para entender como uma partida funciona.</p>
+        </div>
 
-<div class="conteiner-li">
-    <p>
-        <li>Dois Toques: quando um jogador toca a bola duas vezes consecutivas ou a bola bate em várias partes de seu corpo.</li>
-    </p>
+        <div class="grid three">
+          <article class="card">
+            <h3>Sets e pontuação</h3>
+            <ul class="list">
+              <li>Partida com 3 a 5 sets</li>
+              <li>Set vai até 25 pontos</li>
+              <li>Diferença mínima de 2 pontos</li>
+            </ul>
+          </article>
 
-    <p>
-        <li>Quatro Toques: quando a equipe toca na bola quatro vezes antes de enviá-la aos adversários. Contudo, há uma exceção a essa regra, permitindo quatro toques, desde que isso inclua o toque do bloqueio. Por exemplo, se a equipe adversária atacar e a bola bater no bloqueio da equipe, a equipe pode dar mais três toques na bola para tentar atacar de volta.</li>
-    </p>
+          <article class="card">
+            <h3>Empate</h3>
+            <ul class="list">
+              <li>Em 24×24, continua até abrir 2</li>
+              <li>Ex.: 26×24, 27×25…</li>
+              <li>5º set vai até 15 (com 2 de diferença)</li>
+            </ul>
+          </article>
 
-    <p>
-        <li>Toque apoiado: quando um jogador se apoia em outro da sua equipe. Também é considerado falta se ele se apoia em alguma estrutura ou objeto dentro da área de jogo para golpear a bola.</li>
-    </p>
+          <article class="card">
+            <h3>Vitória</h3>
+            <ul class="list">
+              <li>Vence quem ganhar 3 sets</li>
+              <li>Cada equipe tem um técnico</li>
+              <li>Não há tempo fixo por set</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
 
-    <p>
-        <li>Rotação: se a rotação entre os jogadores não acontecer de maneira correta na hora do saque, a equipe comete falta.</li>
-    </p>
+    <section class="section" id="posicoes">
+      <div class="container">
+        <div class="section__head">
+          <h2>Jogadores e posições</h2>
+          <p>Como a equipe se organiza e gira em quadra.</p>
+        </div>
 
-    <p>
-        <li>Rede: se a bola for jogada entre o espaço das duas antenas próximas da rede, o jogador cometerá falta.</li>
-    </p>
+        <div class="grid two">
+          <article class="card">
+            <h3>Quantos jogadores?</h3>
+            <p>
+              No vôlei de quadra, cada equipe tem 12 jogadores (6 titulares e 6 reservas).
+              No vôlei de praia, jogam 2 por equipe.
+            </p>
+            <div class="chips">
+              <span class="chip">Quadra: 6 em jogo</span>
+              <span class="chip">Praia: 2 em jogo</span>
+            </div>
+          </article>
 
-    <p>
-        <li>Golpe na bola na quadra adversária: quando um jogador golpeia a bola que ainda está na quadra da equipe adversária.</li>
-    </p>
+          <article class="card media">
+            <h3>Rotação e quadra</h3>
+            <p>
+              Em quadra, a rotação define as posições. São 3 atletas na linha da frente (próximo à rede)
+              e 3 na linha de trás.
+            </p>
+            <div class="media__frame">
+              <img src="quadra.png" alt="Diagrama da quadra de voleibol">
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
 
-</div>
-<h2 class="pacifico-regular">Fundamentos do voleibol</h2>
-<p>Os fundamentos do vôlei são:</p>
-<div class="conteiner-li">
-    <p>
-        <li>Saque</li>
-    </p>
+    <section class="section alt" id="faltas">
+      <div class="container">
+        <div class="section__head">
+          <h2>Faltas comuns</h2>
+          <p>Alguns exemplos que aparecem bastante no jogo.</p>
+        </div>
 
-    <p>
-        <li>Recepção</li>
-    </p>
+        <div class="grid three">
+          <article class="card">
+            <h3>Dois toques</h3>
+            <p>Quando um jogador toca a bola duas vezes consecutivas.</p>
+          </article>
 
-    <p>
-        <li>Levantamento</li>
-    </p>
+          <article class="card">
+            <h3>Quatro toques</h3>
+            <p>
+              Quando a equipe toca 4 vezes antes de enviar ao adversário
+              (o toque do bloqueio pode não contar).
+            </p>
+          </article>
 
-    <p>
-        <li>Ataque</li>
-    </p>
+          <article class="card">
+            <h3>Rotação e rede</h3>
+            <p>
+              Falta de rotação correta no saque ou bola fora do espaço entre as antenas.
+            </p>
+          </article>
 
-    <p>
-        <li>Bloqueio</li>
-    </p>
-</div>
-<p>Cada jogada do vôlei tem início com o saque. O sacador, como é chamado o jogador que lança a bola, tem que arremessar a bola por cima da rede e dentro da quadra de seu adversário.
+          <article class="card">
+            <h3>Toque apoiado</h3>
+            <p>Quando um jogador se apoia em outro, objeto ou estrutura para golpear a bola.</p>
+          </article>
 
-    Se ele ultrapassar o limite, a bola vai retornar para seu adversário sacar. Note que quando a bola toca no chão do time adversário, ocorre a marcação de pontos.
-    
-    A chamada “zona de saque” representa o local onde o jogador (sacador) deve permanecer para lançar a bola. Trata-se de uma área de 9 metros de largura situada após cada linha de fundo.</p>
-<p>Os jogadores recebem o saque através do fundamento da recepção, geralmente feita através de recursos como a manchete ou o toque.</p>
-<p>Os levantadores, como o próprio nome já indica, levantam a bola com a ponta dos dedos. Em seguida, passam aos atacantes, que tentam marcar pontos lançando a bola para o campo adversário.
+          <article class="card">
+            <h3>Invasão</h3>
+            <p>Quando o jogador golpeia a bola ainda na quadra adversária (situações específicas).</p>
+          </article>
 
-    Os atacantes, com um grande salto, lançam a bola com muita força para o campo adversário, com o objetivo de fazer a bola tocar o chão da equipe adversária, e assim, fazer o ponto.
-    
-    No entanto, os adversários podem realizar um bloqueio ou uma defesa para evitar que a bola toque no chão da equipe após o ataque.
-    
-    Observe que os bloqueios são realizados por dois ou mais jogadores que estão posicionados próximos da rede. Sendo assim, para se defender contra o ataque do adversário, eles saltam no mesmo momento.</p>
-   <center> <iframe width="560" height="315" src="https://www.youtube.com/embed/qV-IIOmGuR0?si=u8kwuOT6mPhl4Cot" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></center>
-</div>
+          <article class="card">
+            <h3>Posicionamento</h3>
+            <p>Quando há erro de posição durante o saque ou organização da equipe em quadra.</p>
+          </article>
+        </div>
+      </div>
+    </section>
 
+    <section class="section" id="fundamentos">
+      <div class="container">
+        <div class="section__head">
+          <h2>Fundamentos do voleibol</h2>
+          <p>O “coração” do jogo: o que acontece em cada ponto.</p>
+        </div>
 
+        <div class="grid three">
+          <article class="card">
+            <h3>Saque</h3>
+            <p>Inicia a jogada. Deve passar por cima da rede e cair dentro da quadra adversária.</p>
+          </article>
 
+          <article class="card">
+            <h3>Recepção</h3>
+            <p>Geralmente com manchete ou toque para controlar o saque do adversário.</p>
+          </article>
 
-    <footer>
-        <p>&copy; 2024 Site de Voleibol</p>
-    </footer>
+          <article class="card">
+            <h3>Levantamento</h3>
+            <p>Feito pelo levantador, posiciona a bola para o ataque com precisão.</p>
+          </article>
+
+          <article class="card">
+            <h3>Ataque</h3>
+            <p>Golpe ofensivo visando fazer a bola tocar o chão do adversário.</p>
+          </article>
+
+          <article class="card">
+            <h3>Bloqueio</h3>
+            <p>Defesa próxima à rede, feita por um ou mais jogadores para parar o ataque.</p>
+          </article>
+
+          <article class="card">
+            <h3>Defesa</h3>
+            <p>Recupera bolas difíceis após ataques e bloqueios, mantendo a jogada viva.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section alt" id="video">
+      <div class="container">
+        <div class="section__head">
+          <h2>Vídeo</h2>
+          <p>Um complemento visual para reforçar o aprendizado.</p>
+        </div>
+
+        <div class="video">
+          <iframe
+            src="https://www.youtube.com/embed/qV-IIOmGuR0"
+            title="Vídeo sobre voleibol"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen>
+          </iframe>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer" id="contato">
+    <div class="container footer__inner">
+      <div>
+        <div class="brand footer__brand">
+          <span class="brand__dot" aria-hidden="true"></span>
+          <span class="brand__text">Voleibol</span>
+        </div>
+        <p class="muted">
+          Projeto demonstrativo para portfólio • HTML, CSS e JavaScript
+        </p>
+      </div>
+
+      <div class="footer__links">
+        <a href="#topo">Voltar ao topo ↑</a>
+      </div>
+    </div>
+
+    <div class="container footer__bottom">
+      <p>© 2024 • Página educacional sobre voleibol</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
